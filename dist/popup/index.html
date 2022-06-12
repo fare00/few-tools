@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Few Tools</title>
+  <script type="module" crossorigin src="/popup/index.js"></script>
+  <link rel="stylesheet" href="/popup/index.css">
+</head>
+
+<body class="p-4">
+    <div class="tabs is-boxed">
+        <ul>
+            <li class="is-active"><a>QR Code</a></li>
+            <li><a>Videos</a></li>
+            <li><a>Alarm</a></li>
+        </ul>
+    </div>
+    <div class="content">
+        <div class="box">
+            <img alt="QR Code" id="qr-code">
+        </div>
+        <div class="box is-hidden is-flex is-flex-direction-column" id="video-controls">
+            <div class="columns is-mobile mb-1">
+                <div class="column is-half">
+                    <button class="button is-primary is-fullwidth" data-event="play">Play All</button>
+                </div>
+                <div class="column is-half">
+                    <button class="button is-primary is-fullwidth" data-event="pause">Pause All</button>
+                </div>
+            </div>
+            <div class="columns is-mobile mb-1">
+                <div class="column is-half">
+                    <button class="button is-primary is-fullwidth mb-0" data-event="mute">Mute All</button>
+                </div>
+                <div class="column is-half">
+                    <button class="button is-primary is-fullwidth mb-0" data-event="unmute">Unmute All</button>
+                </div>
+            </div>
+        </div>
+        <div class="box is-hidden is-flex is-flex-direction-column">
+            <input type="text" class="input is-primary mb-2" placeholder="Select Time">
+            <button class="button is-primary mb-2" id="set-alarm">Set Alarm</button>
+            <button class="button has-background-danger has-text-white" id="clear-time">Clear Time</button>
+            <hr class="my-4">
+            <div class="subtitle">Alarms</div>
+            <div id="alarms">
+                <div class="block has-text-centered">There is no alarms</div>
+            </div>
+            <button class="button has-background-danger has-text-white mt-4" id="delete-alarms">Delete All</button>
+        </div>
+    </div>
+    <div class="is-flex is-flex-direction-row is-align-items-center is-justify-content-center">
+        <img src="../images/icon_32.png" alt="Logo">
+        <h2 class="title is-6 ml-2">Few Tools</h2>
+    </div>
+
+    
+</body>
+
+</html>
